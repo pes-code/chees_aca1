@@ -1,0 +1,616 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	color: #333333;
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+html{
+	scroll-behavior: smooth;
+}
+
+.main_title_box{
+	background: url(../img/mainbg.png);
+	background-position: center;
+    background-size: cover;
+	height: 300Px;
+    color:azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main_title_box h1{
+	font-size: 48px;
+}
+.main_title_box p{
+	font-size: 36px;
+}
+
+.header_bar{
+	font-size: 21px;
+	height: 50px;
+	width: 960px;
+	border: #efefef;
+	position: fixed;
+	top: 0;
+	background-color: whitesmoke;
+	z-index: 1;
+}
+
+#ABOUT:target{
+	padding-top: 2px;
+}
+#COURSE:target{
+	padding-top: 2px;
+}
+#NEWS:target{
+	padding-top: 2px;
+}
+#ACCESS:target{
+	padding-top: 2px;
+}
+#CONTACT:target{
+	padding-top: 2px;
+}
+.header_logo img{
+	height: 45px;
+	float: left;
+	margin-left: 20px;
+}
+
+.nav_menu{
+	float: right;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+/*上下中央にならないのはなぜ？*/
+}
+
+.nav_menu a{
+	margin-right: 50px;
+	color: black;
+
+}
+
+.header_logo img:hover{
+	cursor: url('../img/cheese_cursor4.png'),pointer;
+}
+.nav_menu a:hover{
+	cursor: url('../img/cheese_cursor4.png'),pointer;
+}
+
+
+.About{
+	width: 960px;
+}
+.About_text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 16px;
+	margin-bottom: 80px;
+	
+}
+.About_text div{
+	text-align: center;
+}
+.nav_About{
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffd61a;
+	text-align: center;
+	margin-top: 120px;
+	margin-bottom: 24px;
+}
+.About_text h3{
+	margin-bottom: 64px;
+}
+.About_text div{
+	margin-bottom: 40px;
+}
+
+
+/*
+右から左へ
+----------------------------*/
+@keyframes infinity-scroll-left {
+from {
+transform: translateX(0);
+}
+to {
+transform: translateX(-100%);
+}
+}
+/*
+左から右へ
+----------------------------*/
+@keyframes infinity-scroll-right {
+from {
+transform: translateX(-100%);
+}
+to {
+transform: translateX(0%);
+}
+}
+
+
+
+/*
+IE11対策
+----------------------------*/
+.d-demo__wrap{
+	z-index: 0;
+	margin-bottom: 64px;
+}
+
+_:-ms-lang(x)::-ms-backdrop,
+.d-demo {
+display: -ms-grid;
+overflow: hidden;
+}
+/*----------------------------*/
+.d-demo__wrap {
+display: flex;
+overflow: hidden;
+}
+
+.d-demo__list {
+display: flex;
+list-style: none;
+}
+
+.d-demo__list--left{
+animation :infinity-scroll-left 95s infinite linear 0.5s both;
+}
+.d-demo__list--right{
+animation :infinity-scroll-right 95s infinite linear 0.5s both;
+}
+
+.d-demo__item {
+width: calc(100vw / 6);
+}
+.d-demo__item > img{
+width: 100%;
+}
+
+/*
+マウスオーバーで一時停止させたい場合は以下
+----------------------------*/
+
+.d-demo__wrap:hover .d-demo__list--left {
+animation-play-state: paused;
+}
+
+
+
+
+/*--slotsgame-----------------------------*/
+
+.slots_box{
+	display: flex;
+	justify-content: center;
+	background-image: url(../img/sod_label_01.png);
+	background-size: cover;
+
+}
+.slots_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+.slots_strat_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffd61a;
+	width: 100px;
+	height: 20px;
+
+}
+                    * {
+                        box-sizing: border-box;
+                    }
+
+                    #slots_a,
+                    #slots_b,
+                    #slots_c {
+                        float: left;
+                        width: 320px;
+                        height: 240px;
+                        border: 2px solid;
+                        overflow: hidden;
+                    }
+
+                    #slots_a .wrapper,
+                    #slots_b .wrapper,
+                    #slots_c .wrapper {
+                        width: 320px;
+						height: 630px;
+                    }
+
+                    #slots_a .wrapper .slot,
+                    #slots_b .wrapper .slot,
+                    #slots_c .wrapper .slot {
+                        width: 320px;
+                        height: 0px; 
+                        text-align: center;
+                        padding-top: 2 px;
+                    }
+
+
+
+/*-----------------------------------------------*/
+
+
+
+/*↓保険
+.About_img{
+	width: 960px;
+	margin-bottom: 40px;
+}
+.About_img img{
+	width: 100%;
+}
+↑保険*/
+
+
+
+
+.Course_text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 16px;
+	margin: 64px 0 64px;
+}
+
+.nav_Course{
+	font-size: 24px;
+	font-weight: bold;
+	color: #222222;
+	margin-bottom: 24px;
+
+}
+
+.Course0 h2{
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+
+.Course1{
+	display: flex;
+    background:whitesmoke;
+}
+
+.Course1_img{
+	width: 50%;
+
+}
+.Course1_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+.Course1_text{
+	width: 50%;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	flex-direction: column;	
+}
+
+.Course1_text h2 p{
+	text-align: center;
+}
+
+
+.Course2{
+	display: flex;
+    background:whitesmoke;
+}
+
+.Course2_img{
+	width: 50%;
+
+}
+.Course2_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+.Course2_text{
+	width: 50%;
+    display: flex;
+    justify-content: center;
+	flex-direction: column;
+}
+
+.Course2_text h2,p{
+	text-align: center;
+}
+.Course3{
+	display: flex;
+    background:whitesmoke;
+}
+
+.Course3_img{
+	width: 50%;
+
+}
+.Course3_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+.Course3_text{
+	width: 50%;
+    display: flex;
+    justify-content: center;
+	flex-direction: column;
+	
+}
+
+.Course3_text h2,p{
+	text-align: center;
+}
+
+
+.nav_NEWS{
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffd61a;
+	text-align: center;
+	margin: 64px 0;
+
+}
+.NEWS_box{
+	display: flex;
+
+}
+
+.NEWS_card{
+	width: 33.333%;
+	margin-right: 32px;
+}
+
+.news_img1{
+	margin-bottom: 32px;
+}
+
+.news_text1 p{
+	text-align: left;
+}
+.news_text1 h4{
+	margin-bottom: 24px;
+}
+.More_box{
+	display: flex;
+	justify-content: center;
+
+}
+.More_btn {
+	border: 3px solid whitesmoke ;
+	border-radius: 5px;
+	background-color: #ffd61a;
+	color:black;
+	font-size: 21px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 60px;
+	padding: 20px;
+	margin: 56px 0 48px 0;
+}
+.More_btn button{
+	color:black;
+}
+.More_box :hover{
+	cursor: url('../img/cheese_cursor4.png'),pointer;
+
+}
+
+
+.Access_container{
+	background: center whitesmoke;
+	padding-bottom: 80px;
+	width: 960px;
+}
+
+.nav_Access{
+	font-size: 24px;
+	font-weight: bold;
+	color: #222222;
+	text-align: center;
+	margin-bottom:24px ;
+	padding: 64px 0 24px 0;
+}
+
+.office{
+	padding-bottom: 64px;
+}
+
+.MAP iframe{
+	width: 100%;
+	padding-bottom: 64px;
+}
+.Access_box{
+	display: flex;
+	justify-content: center;
+	margin-bottom:56px ;
+}
+.Access_box p{
+	text-align: left;
+	margin-bottom: 24px;
+
+}
+
+.Access_text p{
+	margin-left: 48px;
+
+}
+
+.Contact_box{
+	width: 100%;
+	
+}
+
+.Contact_text{
+	text-align: center;
+	font-size: 16px;
+	margin: 64px 0 80px 0;
+}
+.Contact_text p{
+	margin-bottom: 32px;
+}
+.info{
+	padding-bottom: 32px;
+	/*全部で64px*/
+}
+.nav_Contact{
+	font-size: 24px;
+	font-weight: bold;
+	color: #222222;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.Contact_form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 24px;
+}
+
+.item_name{
+	background-color:whitesmoke;
+	width: 120px;
+	float: left;
+	margin-right: 120px;
+
+}
+
+.item{
+	border: solid 1px black;
+	width: 300px;
+	color:whitesmoke;
+	display: flex;
+	margin-bottom: 24px;
+}
+.item_check{
+	display: flex;
+	margin-bottom: 24px;
+}
+.item_check label{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+}
+.item_check label p{
+	margin-left: 40px;
+}
+
+.Contact_btn{
+	display: flex;
+	justify-content: center;
+	margin: 40px 0 64px 0;	
+}
+
+.Contact_btn_text input{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid whitesmoke ;
+	width: 100px;
+	background-color: #ffd61a;
+	width: 300px;
+	height: 60px;
+	font-size: 21px;
+	cursor: url('../img/cheese_cursor4.png'),pointer;
+}
+
+
+
+.Contact_form {
+	display: flex;
+	justify-content: center;
+
+}
+
+.item_name{
+	display: flex;
+	justify-content: left;
+}
+.item{
+	border: 3px solid whitesmoke ;
+	border-radius: 5px;
+	background-color:whitesmoke;
+	color:black;
+	display: flex;
+	width: 300px;
+}
+.item_check dd{
+	display: flex;
+	flex-direction: column;
+}
+.copy_box{
+	background: #707070;
+	color: white;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 32px 0;
+}
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
